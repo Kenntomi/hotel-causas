@@ -1,12 +1,46 @@
-# React + Vite
+# Hotel Causas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web para el Hotel Causas, un hotel de lujo en Lima, Perú. El sitio incluye páginas de inicio, sobre nosotros, habitaciones, servicios, galería y reservas.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Diseño responsive para todos los dispositivos
+- Animaciones fluidas con Framer Motion
+- Sistema de reservas funcional
+- Integración con Google Maps
+- Galería de imágenes
+- Información detallada sobre habitaciones y servicios
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Styled Components
+- Framer Motion
+- React Router
+- React Icons
+
+## Desarrollo local
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/Kenntomi/hotel-causas.git
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+```
+
+## Despliegue en Vercel
+
+Este proyecto está configurado para ser desplegado fácilmente en Vercel:
+
+1. Crea una cuenta en [Vercel](https://vercel.com) si aún no tienes una
+2. Conecta tu cuenta de GitHub con Vercel
+3. Importa este repositorio en Vercel
+4. Vercel detectará automáticamente que es un proyecto de Vite y lo configurará correctamente
+5. Haz clic en "Deploy" y ¡listo!
+
+El archivo `vercel.json` incluido en el repositorio asegura que las rutas de React Router funcionen correctamente en producción.
