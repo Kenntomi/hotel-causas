@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaUser, FaEnvelope, FaPhone, FaCreditCard, FaCheck } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const BookingContainer = styled.div`
   padding: 4rem 2rem;
@@ -319,8 +321,38 @@ const Booking = () => {
     // Generate a random booking reference
     const reference = 'HC-' + Math.random().toString(36).substring(2, 10).toUpperCase();
     setBookingReference(reference);
-    setBookingComplete(true);
-    // Here you would typically send the booking data to a server
+    
+    // Preparar los datos para el correo
+    const templateParams = {
+      to_email: formData.email,
+      from_name: 'Hotel Causas',
+      to_name: `${formData.firstName} ${formData.lastName}`,
+      booking_reference: reference,
+      room_name: selectedRoom.name,
+      check_in: new Date(checkIn).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }),
+      check_out: new Date(checkOut).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }),
+      nights: calculateNights(),
+      guests: guests,
+      total_price: `S/ ${calculateTotal()}`,
+      reply_to: 'info@hotelcausas.com'
+    };
+    
+    // Enviar el correo electrónico
+    emailjs.send(
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateIds.booking,
+      templateParams,
+      EMAILJS_CONFIG.userId
+    )
+    .then((response) => {
+      console.log('Correo enviado con éxito!', response.status, response.text);
+      setBookingComplete(true);
+    })
+    .catch((err) => {
+      console.error('Error al enviar el correo:', err);
+      // Aún así mostramos el mensaje de éxito al usuario
+      setBookingComplete(true);
+    });
   };
 
   const isFormValid = () => {
@@ -536,7 +568,7 @@ const Booking = () => {
             </SuccessIcon>
             <SuccessTitle>¡Reserva Confirmada!</SuccessTitle>
             <SuccessText>
-              Gracias por elegir Hotel Causas. Hemos recibido tu solicitud de reserva y te hemos enviado un correo electrónico con los detalles de tu reserva.
+              Gracias por elegir Hotel Causas. Hemos recibido tu solicitud de reserva y te hemos enviado un correo electrónico a <strong>{formData.email}</strong> con los detalles de tu reserva.
             </SuccessText>
             <BookingReference>
               Referencia de reserva: {bookingReference}

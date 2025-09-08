@@ -14,6 +14,7 @@ import Rooms from './pages/Rooms';
 import Services from './pages/Services';
 import Booking from './pages/Booking';
 import About from './pages/About';
+import Terms from './pages/Terms';
 
 // Styles
 import GlobalStyles from './styles/GlobalStyles';
@@ -42,6 +43,7 @@ function App() {
             <Route path="/servicios" element={<Services />} />
             <Route path="/reservar" element={<Booking />} />
             <Route path="/nosotros" element={<About />} />
+            <Route path="/terminos" element={<Terms />} />
           </Routes>
         </MainContent>
         <ContactButton />

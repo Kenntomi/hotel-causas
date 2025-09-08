@@ -19,6 +19,7 @@ Sitio web para el Hotel Causas, un hotel de lujo en Lima, Perú. El sitio incluy
 - Framer Motion
 - React Router
 - React Icons
+- EmailJS (para envío de correos electrónicos)
 
 ## Desarrollo local
 
@@ -44,3 +45,25 @@ Este proyecto está configurado para ser desplegado fácilmente en Vercel:
 5. Haz clic en "Deploy" y ¡listo!
 
 El archivo `vercel.json` incluido en el repositorio asegura que las rutas de React Router funcionen correctamente en producción.
+
+## Configuración de EmailJS
+
+Este proyecto utiliza EmailJS para el envío de correos electrónicos desde los formularios de contacto y reserva. Para configurarlo:
+
+1. Crea una cuenta en [EmailJS](https://www.emailjs.com/)
+2. Crea un servicio de correo electrónico (Gmail, Outlook, etc.)
+3. Crea dos plantillas:
+   - Una para el formulario de contacto (`template_contact`)
+   - Una para el formulario de reserva (`template_booking`)
+4. Actualiza el archivo `src/config/emailjs.js` con tus credenciales:
+
+```javascript
+export const EMAILJS_CONFIG = {
+  serviceId: 'tu_service_id',
+  templateIds: {
+    booking: 'tu_template_id_reserva',
+    contact: 'tu_template_id_contacto'
+  },
+  userId: 'tu_user_id'
+};
+```

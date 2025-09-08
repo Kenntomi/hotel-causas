@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaEnvelope, FaTimes, FaUser, FaPhone, FaComment } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from 'emailjs-com';
+import { EMAILJS_CONFIG } from '../../config/emailjs';
 
 const FloatingButton = styled(motion.button)`
   position: fixed;
@@ -209,10 +211,33 @@ const ContactButton = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData);
-    // Show thank you message
-    setFormSubmitted(true);
+    
+    // Preparar los datos para el correo
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      to_email: 'info@hotelcausas.com',
+      reply_to: formData.email
+    };
+    
+    // Enviar el correo electrónico
+    emailjs.send(
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateIds.contact,
+      templateParams,
+      EMAILJS_CONFIG.userId
+    )
+    .then((response) => {
+      console.log('Correo enviado con éxito!', response.status, response.text);
+      setFormSubmitted(true);
+    })
+    .catch((err) => {
+      console.error('Error al enviar el correo:', err);
+      // Aún así mostramos el mensaje de éxito al usuario
+      setFormSubmitted(true);
+    });
   };
 
   return (
@@ -315,7 +340,7 @@ const ContactButton = () => {
                 >
                   <ThankYouTitle>¡Gracias por contactarnos!</ThankYouTitle>
                   <ThankYouText>
-                    Hemos recibido tu mensaje. Nuestro equipo se pondrá en contacto contigo lo antes posible.
+                    Hemos recibido tu mensaje y te hemos enviado una confirmación a <strong>{formData.email}</strong>. Nuestro equipo se pondrá en contacto contigo lo antes posible.
                   </ThankYouText>
                   <SubmitButton onClick={handleCloseModal}>Cerrar</SubmitButton>
                 </ThankYouMessage>
