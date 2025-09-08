@@ -114,6 +114,26 @@ const Copyright = styled.div`
   color: #a0aec0;
 `;
 
+const PrivacySection = styled.div`
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+`;
+
+const PrivacyTitle = styled.h3`
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+`;
+
+const PrivacyText = styled.p`
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+`;
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -147,6 +167,8 @@ const Footer = () => {
           <FooterLink to="/galeria">Galería</FooterLink>
           <FooterLink to="/nosotros">Nosotros</FooterLink>
           <FooterLink to="/contacto">Contacto</FooterLink>
+          <FooterLink to="/privacidad">Política de Privacidad</FooterLink>
+          <FooterLink to="/terminos">Términos y Condiciones</FooterLink>
         </FooterSection>
         
         <FooterSection>
@@ -185,6 +207,18 @@ const Footer = () => {
         </FooterSection>
       </FooterContent>
       
+      <PrivacySection>
+        <PrivacyTitle>Términos de Privacidad</PrivacyTitle>
+        <PrivacyText>
+          En Hotel Causas respetamos su privacidad y nos comprometemos a proteger sus datos personales. Recopilamos información personal únicamente con su consentimiento y para mejorar su experiencia con nosotros.
+        </PrivacyText>
+        <PrivacyText>
+          Sus datos están seguros con nosotros y nunca serán compartidos con terceros sin su autorización expresa. Utilizamos tecnologías de seguridad avanzadas para proteger su información contra accesos no autorizados.
+        </PrivacyText>
+        <PrivacyText>
+          Para más información sobre cómo manejamos sus datos, puede consultar nuestra <FooterLink to="/privacidad" style={{ display: 'inline', textDecoration: 'underline' }}>Política de Privacidad completa</FooterLink>.
+        </PrivacyText>
+      </PrivacySection>
       <Copyright>
         &copy; {new Date().getFullYear()} Hotel Causas. Todos los derechos reservados.
       </Copyright>

@@ -10,7 +10,7 @@ const HomeContainer = styled.div`
 // Hero Section
 const HeroSection = styled.section`
   height: 90vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -324,7 +324,7 @@ const Home = () => {
       <SectionContainer>
         <SectionTitle>Sobre Nosotros</SectionTitle>
         <AboutContent>
-          <AboutImage src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hotel Lobby" />
+          <AboutImage src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hotel Lobby" />
           <AboutText>
             <AboutSubtitle>Un Oasis de Lujo y Confort</AboutSubtitle>
             <AboutDescription>
@@ -445,7 +445,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <RoomImage src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Habitación Deluxe" />
+            <RoomImage src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Habitación Deluxe" />
             <RoomInfo>
               <RoomTitle>Habitación Deluxe</RoomTitle>
               <RoomDescription>
@@ -461,7 +461,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <RoomImage src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Suite Junior" />
+            <RoomImage src="https://images.unsplash.com/photo-1591088398332-8a7791972843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Suite Junior" />
             <RoomInfo>
               <RoomTitle>Suite Junior</RoomTitle>
               <RoomDescription>
@@ -477,7 +477,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <RoomImage src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Suite Presidencial" />
+            <RoomImage src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Suite Presidencial" />
             <RoomInfo>
               <RoomTitle>Suite Presidencial</RoomTitle>
               <RoomDescription>
@@ -503,7 +503,7 @@ const Home = () => {
               "Nuestra estancia en Hotel Causas fue simplemente perfecta. El personal fue extremadamente atento y las instalaciones son de primera clase. La habitación era espaciosa y la vista desde nuestra terraza era impresionante. ¡Definitivamente volveremos!"
             </TestimonialText>
             <TestimonialAuthor>
-              <AuthorImage src="https://randomuser.me/api/portraits/women/44.jpg" alt="María García" />
+              <AuthorImage src="https://randomuser.me/api/portraits/women/65.jpg" alt="María García" />
               <AuthorInfo>
                 <AuthorName>María García</AuthorName>
                 <AuthorTitle>Madrid, España</AuthorTitle>
@@ -520,7 +520,7 @@ const Home = () => {
               "Como viajero frecuente, puedo decir que Hotel Causas ofrece uno de los mejores servicios que he experimentado. La atención al detalle es excepcional, desde el check-in hasta el check-out. El restaurante del hotel sirve comida deliciosa y el spa es un oasis de tranquilidad."
             </TestimonialText>
             <TestimonialAuthor>
-              <AuthorImage src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Rodríguez" />
+              <AuthorImage src="https://randomuser.me/api/portraits/men/54.jpg" alt="Carlos Rodríguez" />
               <AuthorInfo>
                 <AuthorName>Carlos Rodríguez</AuthorName>
                 <AuthorTitle>Buenos Aires, Argentina</AuthorTitle>

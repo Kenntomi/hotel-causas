@@ -73,7 +73,7 @@ const AboutIntro = styled.div`
 
 const AboutImage = styled.div`
   height: 400px;
-  background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+  background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -315,21 +315,21 @@ const About = () => {
       name: 'Carlos Mendoza',
       position: 'Director General',
       bio: 'Con más de 20 años de experiencia en la industria hotelera, Carlos ha liderado el Hotel Causas desde su fundación con una visión de excelencia y servicio personalizado.',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
     },
     {
       id: 2,
       name: 'María Rodríguez',
       position: 'Directora de Operaciones',
       bio: 'María supervisa todas las operaciones diarias del hotel, asegurando que cada huésped reciba una experiencia excepcional durante su estancia.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
     },
     {
       id: 3,
       name: 'Javier Torres',
       position: 'Chef Ejecutivo',
       bio: 'Reconocido internacionalmente, el Chef Javier combina técnicas culinarias tradicionales con innovación para crear experiencias gastronómicas únicas.',
-      image: 'https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
     },
     {
       id: 4,
